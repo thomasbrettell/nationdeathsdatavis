@@ -1,0 +1,247 @@
+#main {
+  height: 100%;
+  width: 100%;
+  transition: margin-left .5s;
+  display: flex;
+  text-align: center;
+  position: relative;
+}
+
+#dataViz {
+  height: 100%;
+  display: inline-block;
+  width: 55%;
+  margin-left: 17.5%;
+  margin-right: 5%;
+  padding-top: 0px;
+}
+
+body {
+  /* Gradient background obtained from: https://codepen.io/P1N2O/pen/pyBNzX */
+  background: linear-gradient(-45deg, rgb(27, 27, 27), #242424,   rgb(27, 27, 27), #242424);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  font-family: 'Roboto', sans-serif;
+  margin-top: 25px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+body h1 {
+  font-size: 8em;
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+
+.sidenav h2 {
+  font-size: 1.4em;
+  margin-bottom: 5px;
+  margin-top: 65px;
+}
+
+.sidenav p {
+  margin-bottom: 35px;
+}
+
+#categoriesText {
+  margin-bottom: 0px;
+}
+
+.sidenav h3 {
+  margin-bottom: 5px;
+  margin-top: 30px;
+}
+
+.sidenav li {
+  padding-left: 0px;
+  margin-left: 0px;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #FFFFFF;
+  overflow-x: hidden;
+  transition: 0.5s;
+  color: rgb(0, 0, 0);
+  font-family: 'Roboto', sans-serif;
+}
+
+#team p {
+  font-size: .9em;
+  padding: 0px;
+  margin: 0px;
+  margin-left: 50px;
+}
+
+#team {
+  padding-bottom: 50px;
+  padding-top: 20px;
+}
+
+#dataSource a {
+  color: #FFFFFF;
+}
+
+.sidenav p, h1, h2, h3, ul, li {
+  font-size: 17px;
+  text-align: left;
+  width: 450px;
+  margin-top: 0px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.sidenav a:hover {
+  color: rgb(0, 0, 0);
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  color: #818181;
+  transition: 0.3s;
+}
+
+#buttonContainer {
+  margin-bottom: 0px;
+  margin-left: 0px;
+  margin-top: 0px;
+  height: 100%;
+}
+
+#openButton {
+  top: 0;
+  padding: 10px;
+  font-size: 20px;
+  text-decoration: none;
+  color: #000000;
+  background-color: #C9CACC;
+}
+
+#openButton:hover {
+  background-color: #FFFFFF;
+  color: #000000;
+}
+
+#countrySelector option {
+  color: #000000;
+}
+
+#selectorContainer {
+  margin-top: 2%;
+  width: 150px;
+  text-align: left;
+  color: #000000;
+}
+
+#countryText1 {
+  color: rgb(69, 217, 190);
+}
+
+#countryText2 {
+  color: rgb(99, 44, 247);
+}
+
+#countryTing {
+  height: 350px;
+  overflow: auto;
+  color: #000000;
+  font-size: 15px;
+  overflow-x: hidden;
+}
+
+.select-wrapper select {
+  display: none;
+  color: #000000
+}
+
+.select-wrapper2 select {
+  display: none;
+  color: #000000
+}
+
+.select-selected {
+  background-color: #C9CACC;
+}
+
+.select-selected:after {
+  position: relative;
+  content: "";
+  top: 12px;
+  left: 35px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #000000 transparent transparent transparent;
+}
+
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent #000000 transparent;
+  top: -12px;
+}
+
+.select-items div,
+.select-selected {
+  color: #000000;
+  padding: 0px;
+  border: 1px solid transparent;
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  cursor: pointer;
+  user-select: none;
+}
+
+.select-items,
+.select-items2 {
+  background-color: #C9CACC;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+.select-hide,
+.select-hide2 {
+  display: none;
+}
+
+.select-items div:hover,
+.same-as-selected {
+  background-color: #FFFFFF;
+}
+
+.select-items2 div:hover,
+.same-as-selected2 {
+  background-color: #FFFFFF;
+}
+
+  #dataSource {
+    color: #ffffff;
+    padding-bottom: 20px;
+    bottom: 0;
+    padding-left: 23%;
+    position:absolute;
+    z-index: 10;
+  }

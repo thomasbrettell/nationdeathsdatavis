@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <script src="plotly-latest.min.js"></script>
+    <script src="behavior.js" defer></script>
+    <script src="sidebar.js" defer></script>
+    <title>Assessment 3</title>
+</head>
+
+<body>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <h1>A3</h1>
+        <h2>About</h2>
+        <p>This website visualises the estimated causes of death for every country between 1990 and 2017, as a
+            percentage. The information used is from Our World In Data, which calculated the data from sources provided
+            by the Global Burden of Disease, World Health Organisation, Global Terrorism Database and Amnesty
+            International. Each data point represents the weighting of the corresponding cause of death out of the total
+            deaths that occurred in the selected country and year. The visualisation allows for the comparison of causes
+            of death between multiple countries and how the causes of death have changed over time.
+        </p>
+        <h2>Instructions</h2>
+        <p>This visualisation helps you compare the various causes of death around the world.<br>Use the slider to move
+            to
+            a specific year or use the pause and play button to see the gradual change over time.<br>Toggle countries
+            with
+            the legend to view a single country or add another country to see how they compare.<br>Hover over the graph
+            for
+            specific information and spin the graph to customize the position.<br>Make sure to display this webpage in
+            1920x1080p resolution for the best results.<br>Scroll down to see the contents of each category.</p>
+        <h2>Categories</h2>
+        <p id="categoriesText">The types of death were grouped into the following categories:</p>
+        <h3>Non-Infectious Diseases</h3>
+        <ul>
+            <li>Respiratory Diseases</li>
+            <li>Kidney Diseases</li>
+            <li>Liver Diseases</li>
+            <li>Digestive Diseases</li>
+            <li>Hepatitis</li>
+            <li>Diarrheal Diseases</li>
+        </ul>
+        <h3>Nutritional Disorders</h3>
+        <ul>
+            <li>Protein-energy Malnutrition</li>
+            <li>Nutritional Deficiencies</li>
+        </ul>
+        <h3>Chronic Diseases</h3>
+        <ul>
+            <li>Lower Respiratory Infections</li>
+            <li>Cardiovascular Diseases</li>
+            <li>Diabetes</li>
+            <li>Cancers</li>
+            <li>Parkinson Disease</li>
+            <li>Dementia</li>
+        </ul>
+        <h3>Infectious Diseases</h3>
+        <ul>
+            <li>Meningitis</li>
+            <li>Malaria</li>
+            <li>HIV/AIDS</li>
+            <li>Tuberculosis</li>
+            <li>Intestinal Infectious Diseases</li>
+        </ul>
+        <h3>Drug Use</h3>
+        <ul>
+            <li>Drug Use Disorders</li>
+            <li>Alcohol Use Disorders</li>
+        </ul>
+        <h3>Birth Disorders</h3>
+        <ul>
+            <li>Maternal Disorders</li>
+            <li>Neonatal Disorders</li>
+        </ul>
+        <h3>Politically Motivated</h3>
+        <ul>
+            <li>Execution</li>
+            <li>Terrorism</li>
+            <li>Conflict (War)</li>
+        </ul>
+        <h3>Homicides</h3>
+        <ul>
+            <li>Homicides</li>
+        </ul>
+        <h3>Suicides</h3>
+        <ul>
+            <li>Suicides</li>
+        </ul>
+        <h3>Misadventure</h3>
+        <ul>
+            <li>Fire</li>
+            <li>Heat (Hot and Cold Exposure)</li>
+            <li>Drowning</li>
+            <li>Road Injuries</li>
+            <li>Poisonings</li>
+            <li>Natural Disasters</li>
+        </ul>
+        <div id="team">
+            <p><strong>Team Fruit Flies</strong></p>
+            <p>Thomas Brettell (tbre2522)</p>
+            <p>Sumedha Dommatmari (sdom9253)</p>
+            <p>Alannah Frankel (afra9213)</p>
+            <p>Dylan Hensby (dhen2548)</p>
+        </div>
+    </div>
+    <div id="main">
+        <span id="buttonContainer">
+            <a href="javascript:void(0)" id="openButton" style="cursor:pointer" onclick="openNav()">Info ❯</a>
+        </span>
+
+        <span id="dataViz"></span>
+        <span id="selectorContainer">
+            <p id="countryText1"><strong>Country 1: </strong></p>
+            <div id="countryTing">
+                <span id="scrollTing" class="select-wrapper">
+                    <select name="countrySelector" id="countrySelector"></select>
+                </span>
+            </div>
+            <p id="countryText2"><strong>Country 2: </strong></p>
+            <div id="countryTing">
+                <span id="scrollTing" class="select-wrapper2">
+                    <select name="countrySelector2" id="countrySelector2"></select>
+                </span>
+            </div>
+        </span>
+        <div id='dataSource'>Source: <i><a href="https://ourworldindata.org/causes-of-death" target="_blank">https://ourworldindata.org/causes-of-death</a><i></div>
+    </div>
+</body>
+
+</html>
